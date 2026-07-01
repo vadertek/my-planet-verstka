@@ -1,0 +1,49 @@
+<!-- Topbar -->
+<div class="hidden h-8 w-full items-center justify-center bg-main-blue md:flex">
+    <p class="text-sm text-white">Безкоштовна доставка від 1000 грн</p>
+</div>
+
+<!-- Header -->
+<header class="relative border-t-2 border-main-blue bg-white md:border-t-0">
+    <div class="flex items-center justify-between px-4 py-3 md:px-7 md:py-4">
+        <!-- Logo -->
+        <a href="#">
+            <img class="h-8 md:h-10" src="/img/header-logo.webp" alt="My Planet" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+            <ul class="flex space-x-6">
+                <li><a href="#" class="text-dark-blue transition duration-200 hover:text-main-blue">Колекції</a></li>
+                <li><a href="#" class="text-dark-blue transition duration-200 hover:text-main-blue">Про нас</a></li>
+                <li><a href="#" class="text-dark-blue transition duration-200 hover:text-main-blue">Де купити</a></li>
+                <li><a href="#" class="text-dark-blue transition duration-200 hover:text-main-blue">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-5 md:space-x-4">
+            <a href="#" class="hidden md:block">
+                <img class="h-4" src="/img/search-icon.svg" alt="Пошук" />
+            </a>
+            <a href="#">
+                <img class="h-5 md:h-4" src="/img/cart-icon.svg" alt="Кошик" />
+            </a>
+            <button type="button" class="flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden" aria-label="Відкрити меню" aria-expanded="false" data-burger>
+                <span class="h-0.5 w-5 rounded-full bg-main-blue transition duration-200" data-burger-line="top"></span>
+                <span class="h-0.5 w-5 rounded-full bg-main-blue transition duration-200" data-burger-line="middle"></span>
+                <span class="h-0.5 w-5 rounded-full bg-main-blue transition duration-200" data-burger-line="bottom"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="pointer-events-none absolute right-0 left-0 z-20 max-h-0 -translate-y-2 overflow-hidden bg-white px-4 opacity-0 shadow-lg transition-all duration-300 md:hidden" data-mobile-menu>
+        <ul class="flex flex-col gap-4 py-5">
+            <li><a href="#" class="block text-dark-blue transition duration-200 hover:text-main-blue">Колекції</a></li>
+            <li><a href="#" class="block text-dark-blue transition duration-200 hover:text-main-blue">Про нас</a></li>
+            <li><a href="#" class="block text-dark-blue transition duration-200 hover:text-main-blue">Де купити</a></li>
+            <li><a href="#" class="block text-dark-blue transition duration-200 hover:text-main-blue">Контакти</a></li>
+        </ul>
+    </nav>
+</header>

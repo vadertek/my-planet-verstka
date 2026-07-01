@@ -1,18 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/main.css">
-  <title>Document</title>
-          <script src="/js/swiper.min.js" defer></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <title>Document</title>
+        <script src="/js/swiper.min.js" defer></script>
         <script src="/js/swiper.js" defer></script>
-</head>
+    </head>
 
-<body class="container mx-auto mt-10">
-  <h1 class="text-2xl">Hi! I am a sample page, nice to meet you!</h1>
-</body>
+    <body>
+        <!-- HEADER -->
+        <div data-include="/src/components/header.html"></div>
+        <!-- CONTENT -->
+        <main>
+            <!-- Hero Section -->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden max-h-200 w-full object-cover" src="/img/main-bg.webp" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/main-bg-mob.png" alt="" />
+                <div class="absolute inset-0 bg-black/35"></div>
+                <div class="absolute bottom-10 left-4 flex max-w-120 flex-col gap-6 text-white md:bottom-20 md:left-10">
+                    <span class="w-fit rounded-full border border-white px-6 py-2 text-sm leading-none">MyPlanet</span>
+                    <h1 class="max-w-170 text-[48px] leading-[0.95] font-bold md:text-[64px]">Турбота починається на кухні</h1>
+                    <p class="max-w-180 leading-[1.45] text-sm">Безпечні та ефективні засоби для чистоти поверхонь, посуду, фруктів і овочів — для комфортного та здорового простору щодня.</p>
+                    <a
+                        href="#"
+                        class="w-fit rounded-2xl bg-white px-8 py-4 text-sm font-semibold text-dark-blue transition duration-200 hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white"
+                    >
+                        Дізнатися більше
+                    </a>
+                </div>
+            </section>
 
-    <script src="/js/script.js"></script>
+            <!-- Baby Section -->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden max-h-200 w-full object-cover" src="/img/baby.png" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/baby-mob.png" alt="" />
+                <div class="absolute inset-0 bg-black/35"></div>
+                <div class="absolute top-auto bottom-10 md:bottom-auto left-4 flex max-w-120 flex-col gap-6 text-white md:top-10 md:left-10">
+                    <span class="w-fit rounded-full border border-white px-6 py-2 text-sm leading-none">MyPlanet</span>
+                    <h1 class="max-w-170 text-[48px] leading-[0.95] font-bold md:text-[64px]">Турбота починається на кухні</h1>
+                    <p class="max-w-180 leading-[1.45] text-sm">Безпечні та ефективні засоби для чистоти поверхонь, посуду, фруктів і овочів — для комфортного та здорового простору щодня.</p>
+                    <a
+                        href="#"
+                        class="w-fit rounded-2xl bg-white px-8 py-4 text-sm font-semibold text-dark-blue transition duration-200 hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white"
+                    >
+                        Дізнатися більше
+                    </a>
+                </div>
+            </section>
+
+            <!-- Bottle Section -->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden max-h-200 w-full object-cover" src="/img/bottle.png" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/bottle-mob.png" alt="" />
+                <div class="absolute top-1/2 left-4 flex max-w-110 -translate-y-1/2 flex-col gap-4 text-dark-blue md:left-10">
+                    <div class="flex items-center gap-3">
+                        <img class="w-28" src="/img/blue-stars.png" alt="" />
+                        <span class="text-sm">4.9/5 · 12 000+ покупців</span>
+                    </div>
+                    <h2 class="text-[44px] leading-none font-bold">ПРОДУКТ 2026 РОКУ!</h2>
+                    <p class="max-w-100 text-[20px] leading-[1.1] font-semibold">ColdFusion+ ефективно видаляє складні плями від низьких температур</p>
+                    <a href="#" class="w-fit rounded-2xl bg-main-blue px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:bg-dark-blue focus-visible:bg-dark-blue">
+                        Замовити зараз
+                    </a>
+                </div>
+            </section>
+
+            <!-- Our Treasures -->
+            <section class="px-4 py-10 md:px-10">
+                <div class="mx-auto max-w-340">
+                    <h2 class="mb-8 text-center text-[40px] leading-none font-semibold text-main-blue">Наші цінності</h2>
+
+                    <div class="grid gap-8 rounded-lg bg-[url('/img/ocean-mob.png')] bg-cover bg-center px-5 py-8 text-center text-white md:grid-cols-3 md:bg-[url('/img/ocean.png')] md:px-10">
+                        <div class="flex flex-col items-center">
+                            <img class="mb-4 h-7 w-7" src="/img/Family.svg" alt="" />
+                            <h3 class="mb-4 text-[24px] leading-none font-semibold">Турбота про родину</h3>
+                            <p class="max-w-95 text-[16px] leading-tight font-semibold">Безпечні рішення для дому, дітей та щоденного використання.</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <img class="mb-4 h-7 w-7" src="/img/home.svg" alt="" />
+                            <h3 class="mb-4 text-[24px] leading-none font-semibold">Турбота про дім</h3>
+                            <p class="max-w-95 text-[16px] leading-tight font-semibold">Ефективні формули для чистоти кожного куточка вашого простору.</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <img class="mb-4 h-7 w-7" src="/img/Earth.svg" alt="" />
+                            <h3 class="mb-4 text-[24px] leading-none font-semibold">Турбота про планету</h3>
+                            <p class="max-w-95 text-[16px] leading-tight font-semibold">Відповідальні інгредієнти та екологічний підхід на кожному етапі виробництва.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Section -->
+            <section class="bg-[#EEF4FA] px-4 py-6 md:px-10 md:py-8">
+                <div class="mx-auto grid max-w-[1360px] gap-1 md:grid-cols-[minmax(0,972px)_384px] md:items-end">
+                    <div class="flex flex-col justify-between h-full">
+                        <h2 class="max-w-150 text-[24px] leading-[1.15] font-semibold text-[#236591] md:pb-0 pb-5">
+                            Станьте частиною спільноти My Planet<br />
+                            #lifewithmyplanet
+                        </h2>
+
+                        <div class="grid grid-cols-2 gap-1 md:grid-cols-4">
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-1.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-2.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-3.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-4.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <img class="md:block hidden aspect-square w-full rounded-lg object-cover md:h-96 md:w-96" src="/img/part-5.webp" alt="" />
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <div data-include="/src/components/footer.html"></div>
+
+        <script src="/js/script.js"></script>
+    </body>
 </html>

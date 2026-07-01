@@ -6,7 +6,9 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "concurrently  -c \"auto\" \"npm:dev:*\"",
         "dev:tailwind": "npx tailwindcss -i ./app/styles/combined.css -o ./app/styles/main.css --watch --minify",
-        "dev:browser-sync": "browser-sync app -watch --no-notify"
+        "dev:browser-sync": "browser-sync app -watch --no-notify",
+        "format:html": "prettier --write \"app/**/*.html\"",
+        "check:html": "prettier --check \"app/**/*.html\""
     },
     "keywords": [],
     "author": "",

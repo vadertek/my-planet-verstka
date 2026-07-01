@@ -1,3 +1,11 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+@theme {
+    /* Colors */
+    --color-main-blue: #0080c7;
+    --color-dark-blue: #004172;
+
+    /* Fonts */
+    --font-montserat-reg: 'Montserrat-Regular', sans-serif;
+}
 /* CUSTOM CSS GOES HERE */
