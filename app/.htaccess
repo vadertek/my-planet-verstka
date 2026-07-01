@@ -1,0 +1,26 @@
+# FIXME: uncomment and enter the valid path to enable password protection
+# AuthType Basic
+# AuthName "Restricted Access"
+# AuthUserFile "/home/baramik/public_html/drones/.htpasswd"
+# Require valid-user
+
+#### Force HTTPS://WWW and remove trailing / from files ####
+## Turn on rewrite engine
+RewriteEngine on
+
+# Remove trailing slash from non-filepath urls
+RewriteCond %{REQUEST_URI} /(.+)/$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ https://your-domain-name.com/%1 [R=301,L]
+
+# Include trailing slash on directory 
+RewriteCond %{REQUEST_URI} !(.+)/$
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+)$ https://your-domain-name.com/$1/ [R=301,L]
+
+# Force HTTPS
+RewriteCond %{https} off  
+RewriteRule ^(.*)$ https://your-domain-name.com/$1 [R=301,L]
+
+#404 page
+ErrorDocument 404 /404.html
