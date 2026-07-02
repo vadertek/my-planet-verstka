@@ -136,3 +136,36 @@ document.querySelectorAll('[data-trends]').forEach((section) => {
     window.addEventListener('resize', renderCards);
     renderCards();
 });
+
+// FAQ section: keeps one answer open and animates accordion panel height.
+document.querySelectorAll('[data-faq]').forEach((section) => {
+    const items = Array.from(section.querySelectorAll('[data-faq-item]'));
+
+    const setItemState = (item, isOpen) => {
+        const button = item.querySelector('[data-faq-button]');
+        const panel = item.querySelector('[data-faq-panel]');
+        const icon = item.querySelector('[data-faq-icon]');
+
+        button?.setAttribute('aria-expanded', String(isOpen));
+        icon?.classList.toggle('rotate-45', isOpen);
+
+        if (!panel) {
+            return;
+        }
+
+        panel.style.maxHeight = isOpen ? `${panel.scrollHeight}px` : '0px';
+    };
+
+    items.forEach((item, index) => {
+        const button = item.querySelector('[data-faq-button]');
+        setItemState(item, index === 0);
+
+        button?.addEventListener('click', () => {
+            const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+            items.forEach((currentItem) => {
+                setItemState(currentItem, currentItem === item && !isOpen);
+            });
+        });
+    });
+});
