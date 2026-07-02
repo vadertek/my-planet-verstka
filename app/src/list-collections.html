@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <title>Document</title>
+        <script src="/js/swiper.min.js" defer></script>
+        <script src="/js/swiper.js" defer></script>
+    </head>
+
+    <body class="font-montserrat-reg">
+        <!-- HEADER -->
+        <div data-include="/src/components/header.html"></div>
+        <!-- CONTENT -->
+        <main>
+            <!-- Choises -->
+            <section class="py-8 px-4 md:py-10">
+                <div class="mx-auto max-w-340">
+                    <h2 class="mb-5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue uppercase">Обирайте готові рішення</h2>
+
+                    <div class="grid gap-3 md:grid-cols-2 md:gap-4">
+                        <article class="relative flex flex-col overflow-hidden rounded-2xl bg-[#0080C7]/20 px-5 py-5 md:px-10 md:py-10">
+                            <div class="z-10 flex max-w-70 flex-col items-start md:max-w-107.5">
+                                <h3 class="font-montserrat-bold text-[32px] leading-none font-bold text-dark-blue md:whitespace-nowrap md:text-[40px]">My Planet Bundles</h3>
+                                <p class="mt-3 font-montserrat-reg text-[12px] leading-tight text-dark-blue md:text-[16px] md:max-w-[60%]">
+                                    Все необхідне для чистоти та комфорту вашого дому в одному наборі.
+                                </p>
+                            </div>
+
+                            <img class="h-full object-contain object-bottom-right md:w-full" src="/img/col.png" alt="" />
+                            <a
+                                href="#"
+                                class="flex min-h-12.5 md:w-max w-full mt-7 items-center justify-center rounded-2xl bg-white px-10 font-montserrat-bold text-[14px] leading-none font-bold text-[#008895] transition hover:bg-[#00A8B5] hover:text-white focus-visible:bg-[#00A8B5] focus-visible:text-white"
+                            >
+                                Обрати набір
+                            </a>
+                        </article>
+
+                        <article class="relative flex flex-col overflow-hidden rounded-2xl bg-[#1EBECA]/20 px-5 py-5 md:px-10 md:py-10">
+                            <div class="z-10 flex max-w-70 flex-col items-start md:max-w-107.5">
+                                <h3 class="font-montserrat-bold text-[32px] leading-none font-bold text-[#00A8B5] md:whitespace-nowrap md:text-[40px]">Baby Planet Bundles</h3>
+                                <p class="mt-3 font-montserrat-reg text-[12px] leading-tight text-[#008895] md:text-[16px] md:max-w-[60%]">
+                                    Ніжна турбота для малюка та спокій для батьків - у готових комплектах Baby Planet.
+                                </p>
+                            </div>
+
+                            <img class="h-full object-contain object-bottom-right md:w-full" src="/img/col.png" alt="" />
+                            <a
+                                href="#"
+                                class="flex min-h-12.5 md:w-max w-full mt-7 items-center justify-center rounded-2xl bg-white px-10 font-montserrat-bold text-[14px] leading-none font-bold text-[#008895] transition hover:bg-[#00A8B5] hover:text-white focus-visible:bg-[#00A8B5] focus-visible:text-white"
+                            >
+                                Обрати набір
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <div data-include="/src/components/footer.html"></div>
+
+        <script src="/js/script.js" defer></script>
+    </body>
+</html>
