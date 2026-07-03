@@ -137,6 +137,43 @@ document.querySelectorAll('[data-trends]').forEach((section) => {
     renderCards();
 });
 
+// Products grid: filters collection cards by category tabs without pagination.
+document.querySelectorAll('[data-products]').forEach((section) => {
+    const tabs = Array.from(section.querySelectorAll('[data-products-tab]'));
+    const cards = Array.from(section.querySelectorAll('[data-product-card]'));
+    const activeClasses = ['bg-main-blue', 'text-white'];
+    const inactiveClasses = ['bg-[#C0D7ED]/30', 'text-main-blue'];
+
+    const setActiveTab = (activeTab) => {
+        tabs.forEach((tab) => {
+            const isActive = tab === activeTab;
+            tab.setAttribute('aria-selected', String(isActive));
+            tab.classList.toggle(activeClasses[0], isActive);
+            tab.classList.toggle(activeClasses[1], isActive);
+            tab.classList.toggle(inactiveClasses[0], !isActive);
+            tab.classList.toggle(inactiveClasses[1], !isActive);
+        });
+    };
+
+    const filterCards = (category) => {
+        cards.forEach((card) => {
+            const categories = card.dataset.category?.split(' ') ?? [];
+            card.hidden = !categories.includes(category);
+        });
+    };
+
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const category = tab.dataset.productsTab ?? 'all';
+            setActiveTab(tab);
+            filterCards(category);
+            tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+    });
+
+    filterCards('all');
+});
+
 // FAQ section: keeps one answer open and animates accordion panel height.
 document.querySelectorAll('[data-faq]').forEach((section) => {
     const items = Array.from(section.querySelectorAll('[data-faq-item]'));

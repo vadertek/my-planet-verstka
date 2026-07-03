@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <title>Document</title>
+        <script src="/js/swiper.min.js" defer></script>
+        <script src="/js/swiper.js" defer></script>
+    </head>
+
+    <body class="font-montserrat-reg">
+        <!-- HEADER -->
+        <div data-include="/src/components/header.html"></div>
+        <!-- CONTENT -->
+        <main>
+            <!-- Hero Section -->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden max-h-120 2xl:max-h-140 w-full object-cover" src="/img/main-bg.webp" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/main-bg-mob.webp" alt="" />
+                <div class="absolute inset-0 bg-black/35"></div>
+                <div class="absolute bottom-10 left-4 flex max-w-120 flex-col gap-6 text-white md:bottom-20 md:left-10">
+                    <span class="w-fit rounded-full border border-white px-6 py-2 text-sm leading-none">MyPlanet</span>
+                    <h1 class="max-w-170 font-montserrat-bold text-[48px] leading-[0.95] font-bold md:text-[64px]">Турбота починається на кухні</h1>
+                    <p class="max-w-180 font-montserrat-reg leading-[1.45] text-sm">
+                        Безпечні та ефективні засоби для чистоти поверхонь, посуду, фруктів і овочів — для комфортного та здорового простору щодня.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="overflow-hidden bg-white px-4 py-8 md:py-10" data-products>
+                <div class="mx-auto max-w-340">
+                    <div class="-mx-8 px-8 md:-mx-4 md:px-4">
+                        <div class="scrollbar-none flex min-w-0 gap-3 overflow-x-auto pr-8 [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Категорії товарів">
+                            <button
+                                class="min-h-6.5 shrink-0 cursor-pointer rounded-full bg-main-blue px-3.5 py-1.5 text-[12px] leading-none font-bold text-white transition hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white md:min-h-8.5 md:px-4 md:py-2 md:text-[14px]"
+                                type="button"
+                                role="tab"
+                                aria-selected="true"
+                                data-products-tab="all"
+                            >
+                                Все
+                            </button>
+                            <button
+                                class="min-h-6.5 shrink-0 cursor-pointer rounded-full bg-[#C0D7ED]/30 px-3.5 py-1.5 text-[12px] leading-none font-bold text-main-blue transition hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white md:min-h-8.5 md:px-4 md:py-2 md:text-[14px]"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                data-products-tab="universal"
+                            >
+                                Універсальні засоби
+                            </button>
+                            <button
+                                class="min-h-6.5 shrink-0 cursor-pointer rounded-full bg-[#C0D7ED]/30 px-3.5 py-1.5 text-[12px] leading-none font-bold text-main-blue transition hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white md:min-h-8.5 md:px-4 md:py-2 md:text-[14px]"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                data-products-tab="laundry"
+                            >
+                                Прання
+                            </button>
+                            <button
+                                class="min-h-6.5 shrink-0 cursor-pointer rounded-full bg-[#C0D7ED]/30 px-3.5 py-1.5 text-[12px] leading-none font-bold text-main-blue transition hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white md:min-h-8.5 md:px-4 md:py-2 md:text-[14px]"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                data-products-tab="glass"
+                            >
+                                Скло
+                            </button>
+                            <button
+                                class="min-h-6.5 shrink-0 cursor-pointer rounded-full bg-[#C0D7ED]/30 px-3.5 py-1.5 text-[12px] leading-none font-bold text-main-blue transition hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white md:min-h-8.5 md:px-4 md:py-2 md:text-[14px]"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                data-products-tab="dishes"
+                            >
+                                Миття посуду
+                            </button>
+                            <button
+                                class="min-h-6.5 shrink-0 cursor-pointer rounded-full bg-[#C0D7ED]/30 px-3.5 py-1.5 text-[12px] leading-none font-bold text-main-blue transition hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white md:min-h-8.5 md:px-4 md:py-2 md:text-[14px]"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                data-products-tab="special"
+                            >
+                                Спеціальні засоби
+                            </button>
+                            <button
+                                class="min-h-6.5 shrink-0 cursor-pointer rounded-full bg-[#C0D7ED]/30 px-3.5 py-1.5 text-[12px] leading-none font-bold text-main-blue transition hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white md:min-h-8.5 md:px-4 md:py-2 md:text-[14px]"
+                                type="button"
+                                role="tab"
+                                aria-selected="false"
+                                data-products-tab="dishwasher"
+                            >
+                                Посудомийна машина
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-5 pt-8 md:grid-cols-4 md:gap-7 md:pt-10" data-products-grid>
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all universal special">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Універсальний засіб для очищення поверхонь, Allo kitchen поверхонь" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">
+                                    MY PLANET Універсальний засіб для очищення поверхонь, Allo kitchen поверхонь
+                                </h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">600 мл</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">900 мл</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all universal special">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Універсальний засіб для очищення поверхонь, Antibacterial" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">
+                                    MY PLANET Універсальний засіб для очищення поверхонь, Antibacterial
+                                </h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">425 мл</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">900 мл</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all universal">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Універсальний засіб для очищення поверхонь, Green Soap" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">
+                                    MY PLANET Універсальний засіб для очищення поверхонь, Green Soap
+                                </h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">425 мл</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">900 мл</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all universal glass">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Універсальний засіб для очищення поверхонь, Ocean Fresh" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">
+                                    MY PLANET Універсальний засіб для очищення поверхонь, Ocean Fresh
+                                </h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">425 мл</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">900 мл</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all laundry">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Гель для прання, Cold Fusion+" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">MY PLANET Гель для прання, Cold Fusion+</h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">1380 мл</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">2700 мл</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all laundry special">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Порошок для прання, White Fusion+" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">
+                                    MY PLANET Порошок для прання, White Fusion+
+                                </h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">2,64 кг</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">5,4 кг</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all laundry">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Гель для прання, Pure Fusion+" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">MY PLANET Гель для прання, Pure Fusion+</h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">1380 мл</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">2700 мл</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="relative flex min-w-0 flex-col" data-product-card data-category="all glass">
+                            <div class="mb-4 flex h-37.5 items-center justify-center md:mb-7 md:h-82.5">
+                                <img class="max-h-full w-auto object-contain" src="/img/product-example.png" alt="MY PLANET Спрей для очищення скла Crystal Ice, 1000 мл" />
+                            </div>
+                            <div class="flex flex-1 flex-col items-stretch md:items-start">
+                                <h3 class="font-montserrat-bold text-[13px] leading-[1.18] font-bold text-dark-blue md:min-h-10 md:max-w-75 md:text-[16px]">
+                                    MY PLANET Спрей для очищення скла Crystal Ice, 1000 мл
+                                </h3>
+                                <div class="mt-4 hidden gap-2 md:flex">
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">425 мл</span>
+                                    <span class="rounded-lg bg-[#C0D7ED]/20 px-2 py-0.5 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue/70">900 мл</span>
+                                </div>
+                                <a
+                                    class="mt-4 flex min-h-9 w-full items-center justify-center rounded-[10px] border border-main-blue text-center font-montserrat-bold text-[12px] leading-none font-bold text-main-blue transition hover:-translate-y-0.5 hover:border-dark-blue hover:bg-dark-blue hover:text-white hover:shadow-[0_14px_28px_rgba(0,65,114,0.2)] focus-visible:-translate-y-0.5 focus-visible:border-dark-blue focus-visible:bg-dark-blue focus-visible:text-white md:min-h-13 md:rounded-[14px] md:text-[14px]"
+                                    href="#"
+                                >
+                                    <span class="hidden md:inline">Додати в кошик</span>
+                                    <img class="h-5 w-5 md:hidden" src="/img/cart-icon.svg" alt="" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <div data-include="/src/components/footer.html"></div>
+
+        <script src="/js/script.js" defer></script>
+    </body>
+</html>
