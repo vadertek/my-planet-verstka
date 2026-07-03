@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <title>Document</title>
+        <script src="/js/swiper.min.js" defer></script>
+        <script src="/js/swiper.js" defer></script>
+    </head>
+
+    <body class="font-montserrat-reg">
+        <!-- HEADER -->
+        <div data-include="/src/components/header.html"></div>
+        <div data-include="/src/components/breadcrumbs.html"></div>
+        <!-- CONTENT -->
+        <main>
+            <!-- Product Hero -->
+            <section class="py-10 mx-auto max-w-360 flex md:flex-row flex-col">
+                <!-- Images -->
+                <div class="md:w-1/2">
+                    <div class="relative w-full flex overflow-hidden px-4" data-product-gallery-swiper>
+                        <div class="swiper-wrapper flex">
+                            <div class="swiper-slide">
+                                <div class="flex aspect-square items-center justify-center">
+                                    <img class="max-h-full max-w-full object-contain" src="/img/product.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex aspect-square items-center justify-center">
+                                    <img class="max-h-full max-w-full object-contain" src="/img/product.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex aspect-square items-center justify-center">
+                                    <img class="max-h-full max-w-full object-contain" src="/img/product.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex aspect-square items-center justify-center">
+                                    <img class="max-h-full max-w-full object-contain" src="/img/product.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute top-0 left-4 z-10 flex h-7 min-w-17 items-center justify-center rounded-full bg-[#C0D7ED]/20 px-3 font-montserrat-med text-[14px] leading-none font-medium text-main-blue md:top-auto md:bottom-0 md:left-7 md:h-9 md:min-w-[91px] md:text-[18px]"
+                            data-product-gallery-pagination
+                        ></div>
+
+                        <div
+                            class="absolute top-0 right-4 z-10 flex h-7 w-16 overflow-hidden rounded-full bg-[#C0D7ED]/20 md:top-auto md:right-7 md:bottom-0 md:h-9 md:w-22"
+                            aria-label="Гортання фото продукту"
+                        >
+                            <button
+                                class="grid h-7 w-8 cursor-pointer place-items-center text-main-blue transition hover:bg-white/45 focus-visible:bg-white/45 md:h-9 md:w-11 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:bg-white/45 [&.swiper-button-disabled]:text-[#C0D7ED]"
+                                type="button"
+                                aria-label="Попереднє фото"
+                                data-product-gallery-prev
+                            >
+                                <span class="h-3 w-3 rotate-45 border-b-2 border-l-2 border-current md:h-4 md:w-4" aria-hidden="true"></span>
+                            </button>
+                            <button
+                                class="grid h-7 w-8 cursor-pointer place-items-center text-main-blue transition hover:bg-white/45 focus-visible:bg-white/45 md:h-9 md:w-11 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:bg-white/45 [&.swiper-button-disabled]:text-[#C0D7ED]"
+                                type="button"
+                                aria-label="Наступне фото"
+                                data-product-gallery-next
+                            >
+                                <span class="h-3 w-3 rotate-225 border-b-2 border-l-2 border-current md:h-4 md:w-4" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Information -->
+                <div class="px-4 pt-8 md:w-1/2 md:px-10 md:pt-0">
+                    <div class="max-w-140">
+                        <span class="inline-flex h-9 items-center rounded-2xl bg-[#C0D7ED]/20 px-4 font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"> My Planet </span>
+
+                        <h1 class="mt-4 font-montserrat-bold text-[32px] leading-none font-bold text-dark-blue md:text-[40px]">Універсальний засіб для очищення поверхонь</h1>
+
+                        <div class="mt-2.5 flex min-h-5 items-center gap-1.5 font-montserrat-reg text-[10px] leading-none text-[#C0D7ED] md:gap-2 md:text-[12px]">
+                            <img class="w-19 md:w-22.5" src="/img/sky-start.png" alt="Рейтинг 4.9 з 5" />
+                            <span>4.9 (178)</span>
+                        </div>
+
+                        <p class="mt-5 font-montserrat-bold text-[14px] leading-tight font-bold text-main-blue" data-product-description>
+                            Універсальний засіб My Planet допомагає підтримувати порядок на щодень та ефективно очищує різні типи поверхонь у домі.
+                            <span class="hidden" data-product-description-more>
+                                Підходить для регулярного прибирання кухні, ванної кімнати та інших поверхонь, не залишає різкого запаху після використання.</span
+                            >
+                        </p>
+
+                        <button
+                            class="mt-2 inline-block cursor-pointer font-montserrat-bold text-[14px] leading-none font-bold text-[#C0D7ED] underline"
+                            type="button"
+                            aria-expanded="false"
+                            data-product-read-more
+                        >
+                            Читати більше
+                        </button>
+
+                        <p class="mt-6 font-montserrat-bold text-[32px] leading-none font-bold text-dark-blue">$340. 00</p>
+
+                        <div class="mt-10 flex flex-wrap items-center gap-3">
+                            <p class="font-montserrat-bold text-[16px] leading-none font-bold text-main-blue">Об’єм</p>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="h-9 rounded-2xl border border-main-blue px-4 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue" type="button">600 мл</button>
+                                <button class="h-9 rounded-2xl border border-[#C0D7ED] px-4 font-montserrat-bold text-[16px] leading-none font-bold text-[#C0D7ED]" type="button">800 мл</button>
+                                <button class="h-9 rounded-2xl border border-[#C0D7ED] px-4 font-montserrat-bold text-[16px] leading-none font-bold text-[#C0D7ED]" type="button">1000 мл</button>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 flex gap-2">
+                            <div
+                                class="flex h-13 min-w-22 items-center justify-center gap-4 rounded-2xl border border-main-blue px-4 font-montserrat-bold text-[16px] leading-none font-bold text-main-blue"
+                            >
+                                <button class="cursor-pointer text-[#C0D7ED]" type="button" aria-label="Зменшити кількість">−</button>
+                                <span>1</span>
+                                <button class="cursor-pointer" type="button" aria-label="Збільшити кількість">+</button>
+                            </div>
+
+                            <button
+                                class="flex h-13 flex-1 items-center justify-center rounded-2xl bg-main-blue px-5 font-montserrat-extra text-[16px] leading-none font-bold text-white transition hover:bg-dark-blue focus-visible:bg-dark-blue"
+                                type="button"
+                            >
+                                Купити за 340 UAH
+                            </button>
+                        </div>
+
+                        <div class="mt-6" data-product-info-accordion>
+                            <div class="border-b border-[#C0D7ED]" data-product-info-item>
+                                <button
+                                    class="flex w-full cursor-pointer items-center justify-between py-3 font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                    type="button"
+                                    aria-expanded="false"
+                                    data-product-info-button
+                                >
+                                    <span>Опис</span>
+                                    <span class="h-3 w-3 rotate-45 border-r-2 border-b-2 border-main-blue transition duration-200" aria-hidden="true" data-product-info-icon></span>
+                                </button>
+                                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-product-info-panel>
+                                    <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">Універсальний засіб для щоденного очищення поверхонь у домі.</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#C0D7ED]" data-product-info-item>
+                                <button
+                                    class="flex w-full cursor-pointer items-center justify-between py-3 font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                    type="button"
+                                    aria-expanded="false"
+                                    data-product-info-button
+                                >
+                                    <span>Переваги</span>
+                                    <span class="h-3 w-3 rotate-45 border-r-2 border-b-2 border-main-blue transition duration-200" aria-hidden="true" data-product-info-icon></span>
+                                </button>
+                                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-product-info-panel>
+                                    <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">Ефективно очищує, підходить для регулярного використання та має приємний аромат.</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#C0D7ED]" data-product-info-item>
+                                <button
+                                    class="flex w-full cursor-pointer items-center justify-between py-3 font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                    type="button"
+                                    aria-expanded="false"
+                                    data-product-info-button
+                                >
+                                    <span>Склад</span>
+                                    <span class="h-3 w-3 rotate-45 border-r-2 border-b-2 border-main-blue transition duration-200" aria-hidden="true" data-product-info-icon></span>
+                                </button>
+                                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-product-info-panel>
+                                    <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">Компоненти формули вказані на упаковці продукту.</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#C0D7ED]" data-product-info-item>
+                                <button
+                                    class="flex w-full cursor-pointer items-center justify-between py-3 font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                    type="button"
+                                    aria-expanded="false"
+                                    data-product-info-button
+                                >
+                                    <span>Спосіб використання</span>
+                                    <span class="h-3 w-3 rotate-45 border-r-2 border-b-2 border-main-blue transition duration-200" aria-hidden="true" data-product-info-icon></span>
+                                </button>
+                                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-product-info-panel>
+                                    <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">Нанесіть засіб на поверхню, протріть вологою губкою або серветкою.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Baby Section -->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden max-h-140 w-full object-cover object-top" src="/img/baby.webp" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/baby-mob.webp" alt="" />
+                <div class="absolute inset-0 bg-black/35"></div>
+                <div class="absolute top-auto bottom-10 md:bottom-auto left-4 flex max-w-170 flex-col gap-6 text-white md:top-10 md:left-10">
+                    <h1 class="max-w-170 font-montserrat-bold text-[48px] leading-[0.95] font-bold md:text-[64px]">Для життя, яке відбувається між прибираннями.</h1>
+                    <p class="max-w-120 font-montserrat-reg leading-[1.45] text-sm">
+                        Безпечні та ефективні засоби для чистоти поверхонь, посуду, фруктів і овочів — для комфортного та здорового простору щодня.
+                    </p>
+                    <a
+                        href="#"
+                        class="w-fit rounded-2xl bg-white px-8 py-4 font-montserrat-bold text-sm font-bold text-dark-blue transition duration-200 hover:bg-main-blue hover:text-white focus-visible:bg-main-blue focus-visible:text-white"
+                    >
+                        Дізнатися більше
+                    </a>
+                </div>
+            </section>
+            <!-- Our Treasures -->
+            <section class="px-4 py-10 md:px-10">
+                <div class="mx-auto max-w-360">
+                    <h2 class="mb-8 text-center font-montserrat-bold text-[40px] leading-none font-bold text-main-blue">Наші цінності</h2>
+
+                    <div class="grid gap-8 rounded-lg bg-[url('/img/ocean-mob.webp')] bg-cover bg-center px-5 py-8 text-center text-white md:grid-cols-3 md:bg-[url('/img/ocean.webp')] md:px-10">
+                        <div class="flex flex-col items-center">
+                            <img class="mb-4 h-7 w-7" src="/img/Family.svg" alt="" />
+                            <h3 class="mb-4 font-montserrat-bold text-[24px] leading-none font-bold">Турбота про родину</h3>
+                            <p class="max-w-95 font-montserrat-reg text-[16px] leading-tight">Безпечні рішення для дому, дітей та щоденного використання.</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <img class="mb-4 h-7 w-7" src="/img/home.svg" alt="" />
+                            <h3 class="mb-4 font-montserrat-bold text-[24px] leading-none font-bold">Турбота про дім</h3>
+                            <p class="max-w-95 font-montserrat-reg text-[16px] leading-tight">Ефективні формули для чистоти кожного куточка вашого простору.</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <img class="mb-4 h-7 w-7" src="/img/Earth.svg" alt="" />
+                            <h3 class="mb-4 font-montserrat-bold text-[24px] leading-none font-bold">Турбота про планету</h3>
+                            <p class="max-w-95 font-montserrat-reg text-[16px] leading-tight">Відповідальні інгредієнти та екологічний підхід на кожному етапі виробництва.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Reviews Section -->
+            <section class="overflow-hidden bg-[#F1F9E4] px-4 py-8 md:px-10 md:py-10">
+                <div class="mx-auto max-w-340">
+                    <div class="mb-8 flex items-start justify-between gap-5 md:mb-9 md:items-center">
+                        <h2 class="font-montserrat-bold text-[40px] leading-none font-bold text-[#3FA11F] md:whitespace-nowrap">Нам довіряють тисячі родин</h2>
+
+                        <div class="hidden h-9 w-22 shrink-0 overflow-hidden rounded-full bg-[#CFEFAC] md:flex" aria-label="Гортання відгуків">
+                            <button
+                                class="grid h-9 w-11 cursor-pointer place-items-center text-[#82B727] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:bg-white/45 [&.swiper-button-disabled]:opacity-60"
+                                type="button"
+                                aria-label="Попередній відгук"
+                                data-reviews-prev
+                            >
+                                <span class="h-3.5 w-3.5 rotate-45 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                            </button>
+                            <button
+                                class="grid h-9 w-11 cursor-pointer place-items-center text-[#82B727] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:bg-white/45 [&.swiper-button-disabled]:opacity-60"
+                                type="button"
+                                aria-label="Наступний відгук"
+                                data-reviews-next
+                            >
+                                <span class="h-3.5 w-3.5 rotate-225 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex w-full items-center overflow-hidden" data-reviews-swiper>
+                    <div class="swiper-wrapper flex">
+                        <article class="swiper-slide flex min-h-75 flex-col rounded-2xl border border-[#82B727] bg-white px-5 py-5 md:min-h-75 md:px-7 md:py-6">
+                            <div class="flex items-start justify-between gap-4 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]">
+                                <p class="text-[#325037]/70">Олена К. <span class="text-[#82B727]">· Перевірений покупець</span></p>
+                                <time datetime="2025-05-14">14.05.2025</time>
+                            </div>
+                            <div class="mt-3 text-[22px] leading-none text-[#82B727]" aria-label="5 зірок">★★★★★</div>
+                            <h3 class="mt-10 font-montserrat-bold text-[24px] leading-none font-bold text-[#325037]">Чистота без зайвих зусиль</h3>
+                            <p class="mt-5 font-montserrat-bold text-[16px] leading-none font-bold text-[#325037]">
+                                Користуюся універсальним засобом Ocean Fresh вже понад пів року. Чудово справляється з підлогою, кухонними поверхнями та ванною кімнатою. Приємний аромат і жодного
+                                відчуття агресивної хімії.
+                            </p>
+                            <a class="mt-auto flex items-center gap-5 pt-7 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]" href="#">
+                                <img class="h-14 w-10 shrink-0 object-contain" src="/img/product-example.png" alt="" />
+                                <span>My Planet Ocean Fresh Universal Cleaner</span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide flex min-h-75 flex-col rounded-2xl border border-[#82B727] bg-white px-5 py-5 md:min-h-75 md:px-7 md:py-6">
+                            <div class="flex items-start justify-between gap-4 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]">
+                                <p class="text-[#325037]/70">Марія В <span class="text-[#82B727]">Перевірений покупець</span></p>
+                                <time datetime="2025-06-02">02.06.2025</time>
+                            </div>
+                            <div class="mt-3 text-[22px] leading-none text-[#82B727]" aria-label="5 зірок">★★★★★</div>
+                            <h3 class="mt-10 font-montserrat-bold text-[24px] leading-none font-bold text-[#325037]">Ефективно та безпечно</h3>
+                            <p class="mt-5 font-montserrat-bold text-[16px] leading-none font-bold text-[#325037]">
+                                Veggie Wash став незамінним на кухні. Особливо подобається, що можна ретельно мити овочі та фрукти для дітей без зайвих хвилювань.
+                            </p>
+                            <a class="mt-auto flex items-center gap-5 pt-7 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]" href="#">
+                                <img class="h-14 w-10 shrink-0 object-contain" src="/img/product-example.png" alt="" />
+                                <span>My Planet Veggie Wash</span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide flex min-h-75 flex-col rounded-2xl border border-[#82B727] bg-white px-5 py-5 md:min-h-75 md:px-7 md:py-6">
+                            <div class="flex items-start justify-between gap-4 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]">
+                                <p class="text-[#325037]/70">Ірина С. <span class="text-[#82B727]">Перевірений покупець</span></p>
+                                <time datetime="2025-05-28">28.05.2025</time>
+                            </div>
+                            <div class="mt-3 text-[22px] leading-none text-[#82B727]" aria-label="5 зірок">★★★★★</div>
+                            <h3 class="mt-10 font-montserrat-bold text-[24px] leading-none font-bold text-[#325037]">Дім сяє чистотою</h3>
+                            <p class="mt-5 font-montserrat-bold text-[16px] leading-none font-bold text-[#325037]">
+                                Спрей Crystal Ice чудово очищує скло без розводів. Використовую у ванній кімнаті та на вікнах.
+                            </p>
+                            <a class="mt-auto flex items-center gap-5 pt-7 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]" href="#">
+                                <img class="h-14 w-10 shrink-0 object-contain" src="/img/product-example.png" alt="" />
+                                <span>My Planet Crystal Ice Glass Cleaner</span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide flex min-h-75 flex-col rounded-2xl border border-[#82B727] bg-white px-5 py-5 md:min-h-75 md:px-7 md:py-6">
+                            <div class="flex items-start justify-between gap-4 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]">
+                                <p class="text-[#325037]/70">Анна П. <span class="text-[#82B727]">Перевірений покупець</span></p>
+                                <time datetime="2025-06-10">10.06.2025</time>
+                            </div>
+                            <div class="mt-3 text-[22px] leading-none text-[#82B727]" aria-label="5 зірок">★★★★★</div>
+                            <h3 class="mt-10 font-montserrat-bold text-[24px] leading-none font-bold text-[#325037]">Приємний аромат щодня</h3>
+                            <p class="mt-5 font-montserrat-bold text-[16px] leading-none font-bold text-[#325037]">
+                                Засіб швидко прибирає сліди після готування, не залишає липкості та має свіжий аромат.
+                            </p>
+                            <a class="mt-auto flex items-center gap-5 pt-7 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]" href="#">
+                                <img class="h-14 w-10 shrink-0 object-contain" src="/img/product-example.png" alt="" />
+                                <span>My Planet Kitchen Cleaner</span>
+                            </a>
+                        </article>
+
+                        <article class="swiper-slide flex min-h-75 flex-col rounded-2xl border border-[#82B727] bg-white px-5 py-5 md:min-h-75 md:px-7 md:py-6">
+                            <div class="flex items-start justify-between gap-4 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]">
+                                <p class="text-[#325037]/70">Анна П. <span class="text-[#82B727]">Перевірений покупець</span></p>
+                                <time datetime="2025-06-10">10.06.2025</time>
+                            </div>
+                            <div class="mt-3 text-[22px] leading-none text-[#82B727]" aria-label="5 зірок">★★★★★</div>
+                            <h3 class="mt-10 font-montserrat-bold text-[24px] leading-none font-bold text-[#325037]">Приємний аромат щодня</h3>
+                            <p class="mt-5 font-montserrat-bold text-[16px] leading-none font-bold text-[#325037]">
+                                Засіб швидко прибирає сліди після готування, не залишає липкості та має свіжий аромат.
+                            </p>
+                            <a class="mt-auto flex items-center gap-5 pt-7 font-montserrat-bold text-[16px] leading-none font-bold text-[#82B727]" href="#">
+                                <img class="h-14 w-10 shrink-0 object-contain" src="/img/product-example.png" alt="" />
+                                <span>My Planet Kitchen Cleaner</span>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="mx-auto max-w-340">
+                    <div class="mx-auto mt-8 flex h-9 w-22 overflow-hidden rounded-full bg-[#CFEFAC] md:hidden" aria-label="Гортання відгуків">
+                        <button
+                            class="grid h-9 w-11 cursor-pointer place-items-center text-[#82B727] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:bg-white/45 [&.swiper-button-disabled]:opacity-60"
+                            type="button"
+                            aria-label="Попередній відгук"
+                            data-reviews-mobile-prev
+                        >
+                            <span class="h-3.5 w-3.5 rotate-45 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                        </button>
+                        <button
+                            class="grid h-9 w-11 cursor-pointer place-items-center text-[#82B727] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:bg-white/45 [&.swiper-button-disabled]:opacity-60"
+                            type="button"
+                            aria-label="Наступний відгук"
+                            data-reviews-mobile-next
+                        >
+                            <span class="h-3.5 w-3.5 rotate-225 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Turtle Section -->
+            <section class="px-0 pt-8 md:px-10 md:pt-10 md:pb-10 pb-0">
+                <div class="relative mx-auto h-120 max-w-340 overflow-hidden md:rounded-2xl md:h-60 md:px-0 px-4">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/img/turtle.png" />
+                        <img class="absolute inset-0 h-full w-full object-cover" src="/img/turtle-mob.png" alt="" />
+                    </picture>
+                    <div class="absolute inset-0 bg-dark-blue/15"></div>
+
+                    <div class="relative z-10 flex h-full flex-col justify-between py-7 text-white md:items-center md:justify-center md:px-10 md:py-0">
+                        <a
+                            class="mx-auto flex min-h-8.5 min-w-45 items-center justify-center rounded-2xl border border-white px-4 font-montserrat-reg text-[14px] leading-none font-bold text-white uppercase transition hover:bg-white hover:text-[#236591] focus-visible:bg-white focus-visible:text-[#236591] md:min-w-53"
+                            href="#"
+                        >
+                            Обирайте за потребою
+                        </a>
+
+                        <h2 class="px-4 font-montserrat-bold text-[40px] leading-none font-bold text-white md:mt-6 md:px-0 text-center">Безпечні рішення для кожного дому</h2>
+
+                        <div class="scrollbar-none -mx-4 flex gap-5 overflow-x-auto px-4 md:mx-0 md:mt-6 md:justify-center md:gap-4 md:overflow-visible md:px-0">
+                            <a
+                                class="flex h-9.5 shrink-0 items-center justify-center rounded-2xl bg-white/80 px-4 font-montserrat-reg text-[16px] leading-none font-semibold whitespace-nowrap text-[#236591] transition hover:bg-white focus-visible:bg-white md:h-8.5"
+                                href="#"
+                            >
+                                Baby Planet
+                            </a>
+                            <a
+                                class="flex h-9.5 shrink-0 items-center justify-center rounded-2xl bg-white/80 px-4 font-montserrat-reg text-[16px] leading-none font-semibold whitespace-nowrap text-[#236591] transition hover:bg-white focus-visible:bg-white md:h-8.5"
+                                href="#"
+                            >
+                                Гіпоалергенний догляд
+                            </a>
+                            <a
+                                class="flex h-9.5 shrink-0 items-center justify-center rounded-2xl bg-white/80 px-4 font-montserrat-reg text-[16px] leading-none font-semibold whitespace-nowrap text-[#236591] transition hover:bg-white focus-visible:bg-white md:h-8.5"
+                                href="#"
+                            >
+                                Для сім’ї
+                            </a>
+                            <a
+                                class="flex h-9.5 shrink-0 items-center justify-center rounded-2xl bg-white/80 px-4 font-montserrat-reg text-[16px] leading-none font-semibold whitespace-nowrap text-[#236591] transition hover:bg-white focus-visible:bg-white md:h-8.5"
+                                href="#"
+                            >
+                                Для кухні
+                            </a>
+                            <a
+                                class="flex h-9.5 shrink-0 items-center justify-center rounded-2xl bg-white/80 px-4 font-montserrat-reg text-[16px] leading-none font-semibold whitespace-nowrap text-[#236591] transition hover:bg-white focus-visible:bg-white md:h-8.5"
+                                href="#"
+                            >
+                                Для прання
+                            </a>
+                            <a
+                                class="flex h-9.5 shrink-0 items-center justify-center rounded-2xl bg-white/80 px-4 font-montserrat-reg text-[16px] leading-none font-semibold whitespace-nowrap text-[#236591] transition hover:bg-white focus-visible:bg-white md:h-8.5"
+                                href="#"
+                            >
+                                Eco Friendly
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Community Section -->
+            <section class="bg-[#EEF4FA] px-4 py-6 md:px-10 md:py-8">
+                <div class="mx-auto grid max-w-340 gap-1 md:grid-cols-[minmax(0,972px)_384px] md:items-end">
+                    <div class="flex flex-col justify-between h-full">
+                        <h2 class="max-w-150 font-montserrat-bold text-[24px] leading-[1.15] font-bold text-[#236591] md:pb-0 pb-5">
+                            Станьте частиною спільноти My Planet<br />
+                            #lifewithmyplanet
+                        </h2>
+
+                        <div class="grid grid-cols-2 gap-1 md:grid-cols-4">
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-1.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-2.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-3.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-4.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <img class="md:block hidden aspect-square w-full rounded-lg object-cover md:h-96 md:w-96" src="/img/part-5.webp" alt="" />
+                </div>
+            </section>
+
+            <!-- FAQ (Blue )-->
+            <section class="px-4 py-10 md:px-10 md:py-14" data-faq>
+                <div class="mx-auto max-w-340">
+                    <h2 class="mb-8 text-center font-montserrat-bold text-[40px] leading-none font-bold text-dark-blue">Часті питання</h2>
+
+                    <div class="mx-auto max-w-155">
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="true"
+                                data-faq-button
+                            >
+                                <span>Чим засоби My Planet відрізняються від звичайних побутових засобів?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300 rotate-45" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    My Planet поєднує ефективність для щоденного прибирання з уважним ставленням до родини, поверхонь і довкілля.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Чи безпечні засоби My Planet для використання в домі з дітьми та домашніми тваринами?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Так, засоби підходять для щоденного дому за умови використання згідно з інструкцією на упаковці.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Для яких поверхонь підходять універсальні засоби My Planet?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Вони підходять для більшості твердих поверхонь: підлоги, кухонних поверхонь, ванної кімнати та інших зон дому.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Чи можна використовувати засоби My Planet щодня?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Так, формули розраховані на регулярне використання для підтримання чистоти без зайвого навантаження.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Чи залишають засоби My Planet різкий хімічний запах?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">Ні, продукти мають приємні аромати без відчуття агресивної хімії після прибирання.</p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Як обрати правильний засіб My Planet для своїх потреб?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Орієнтуйтеся на зону використання: кухня, прання, дитячі речі, скло або універсальний догляд для дому.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <div data-include="/src/components/footer.html"></div>
+
+        <!-- Scripts -->
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const initProductGallerySwiper = () => {
+                    if (typeof Swiper === 'undefined' || !document.querySelector('[data-product-gallery-swiper]')) {
+                        return;
+                    }
+
+                    const formatSlideNumber = (number) => String(number).padStart(2, '0');
+
+                    new Swiper('[data-product-gallery-swiper]', {
+                        slidesPerView: 1,
+                        speed: 350,
+                        watchOverflow: true,
+                        navigation: {
+                            prevEl: '[data-product-gallery-prev]',
+                            nextEl: '[data-product-gallery-next]',
+                        },
+                        pagination: {
+                            el: '[data-product-gallery-pagination]',
+                            type: 'fraction',
+                            formatFractionCurrent: formatSlideNumber,
+                            formatFractionTotal: formatSlideNumber,
+                            renderFraction: (currentClass, totalClass) => `
+                                <span class="${currentClass}"></span>
+                                <span class="px-1 text-[#C0D7ED]">/</span>
+                                <span class="${totalClass}"></span>
+                            `,
+                        },
+                    });
+                };
+
+                const initProductReadMore = () => {
+                    const button = document.querySelector('[data-product-read-more]');
+                    const moreText = document.querySelector('[data-product-description-more]');
+
+                    if (!button || !moreText) {
+                        return;
+                    }
+
+                    button.addEventListener('click', () => {
+                        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                        button.setAttribute('aria-expanded', String(!isExpanded));
+                        moreText.classList.toggle('hidden', isExpanded);
+                        button.textContent = isExpanded ? 'Читати більше' : 'Згорнути';
+                    });
+                };
+
+                const initProductInfoAccordion = () => {
+                    document.querySelectorAll('[data-product-info-accordion]').forEach((accordion) => {
+                        const items = Array.from(accordion.querySelectorAll('[data-product-info-item]'));
+
+                        const setItemState = (item, isOpen) => {
+                            const button = item.querySelector('[data-product-info-button]');
+                            const panel = item.querySelector('[data-product-info-panel]');
+                            const icon = item.querySelector('[data-product-info-icon]');
+
+                            button?.setAttribute('aria-expanded', String(isOpen));
+                            icon?.classList.toggle('rotate-45', !isOpen);
+                            icon?.classList.toggle('rotate-225', isOpen);
+
+                            if (panel) {
+                                panel.style.maxHeight = isOpen ? `${panel.scrollHeight}px` : '0px';
+                            }
+                        };
+
+                        items.forEach((item) => {
+                            const button = item.querySelector('[data-product-info-button]');
+                            setItemState(item, false);
+
+                            button?.addEventListener('click', () => {
+                                const shouldOpen = button.getAttribute('aria-expanded') !== 'true';
+
+                                items.forEach((currentItem) => {
+                                    setItemState(currentItem, currentItem === item && shouldOpen);
+                                });
+                            });
+                        });
+                    });
+                };
+
+                initProductGallerySwiper();
+                initProductReadMore();
+                initProductInfoAccordion();
+            });
+        </script>
+        <script src="/js/script.js" defer></script>
+    </body>
+</html>
