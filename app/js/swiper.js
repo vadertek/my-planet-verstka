@@ -99,3 +99,33 @@ const initGoodToKnowSwiper = () => {
 };
 
 initGoodToKnowSwiper();
+
+// Stores slider.
+const initStoresSwiper = () => {
+    if (typeof Swiper === 'undefined' || !document.querySelector('[data-stores-swiper]')) {
+        return;
+    }
+
+    new Swiper('[data-stores-swiper]', {
+        slidesPerView: 1.5,
+        spaceBetween: 16,
+        speed: 350,
+        watchOverflow: true,
+        navigation: {
+            prevEl: '[data-stores-prev]',
+            nextEl: '[data-stores-next]',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 44,
+            },
+        },
+    });
+};
+
+initStoresSwiper();
