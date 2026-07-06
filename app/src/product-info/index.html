@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <title>Document</title>
+        <script src="/js/swiper.min.js" defer></script>
+        <script src="/js/swiper.js" defer></script>
+    </head>
+
+    <body class="font-montserrat-reg">
+        <!-- HEADER -->
+        <div data-include="/src/components/header.html"></div>
+        <!-- CONTENT -->
+        <main>
+            <!-- Product Hero -->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden max-h-180 w-full object-cover" src="/img/producy-hero-info.png" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/producy-hero-info-mob.png" alt="" />
+                <div class="absolute bottom-10 left-4 flex max-w-150 flex-col gap-4 text-dark-blue md:top-1/2 md:bottom-auto md:left-10 md:-translate-y-1/2">
+                    <div class="flex items-center gap-3">
+                        <img class="w-28" src="/img/blue-stars.webp" alt="" />
+                        <span class="font-montserrat-reg text-sm">4.9/5 · 12 000+ покупців</span>
+                    </div>
+                    <h2 class="font-montserrat-bold text-[44px] leading-none font-bold">
+                        Чистота та <br />
+                        дезінфекція без хлору
+                    </h2>
+                    <p class="max-w-140 font-montserrat-reg text-[20px] leading-[1.1]">Ефективно очищує поверхні та допомагає підтримувати гігієну в домі без різкого запаху хлору.</p>
+                    <a
+                        href="#"
+                        class="w-fit rounded-2xl bg-main-blue px-6 py-3 font-montserrat-bold text-sm font-bold text-white transition duration-200 hover:bg-dark-blue focus-visible:bg-dark-blue"
+                    >
+                        Замовити зараз
+                    </a>
+                </div>
+            </section>
+            <!-- Uses Sections -->
+            <section class="overflow-hidden px-4 py-8 md:px-10 md:py-12">
+                <div class="mx-auto max-w-360">
+                    <div class="mb-7 flex items-center justify-between gap-5 md:mb-10">
+                        <h2 class="font-montserrat-bold text-[32px] leading-none font-bold text-[#004200] md:whitespace-nowrap md:text-[40px]">Переваги</h2>
+
+                        <div class="hidden h-9 w-22 shrink-0 overflow-hidden rounded-2xl bg-[#82B727]/20 md:flex" aria-label="Гортання переваг">
+                            <button
+                                class="grid h-9 w-11 cursor-pointer place-items-center text-[#004200] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:opacity-40"
+                                type="button"
+                                aria-label="Попередня перевага"
+                                data-benefits-prev
+                            >
+                                <span class="h-3.5 w-3.5 rotate-45 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                            </button>
+                            <button
+                                class="grid h-9 w-11 cursor-pointer place-items-center text-[#004200] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:opacity-40"
+                                type="button"
+                                aria-label="Наступна перевага"
+                                data-benefits-next
+                            >
+                                <span class="h-3.5 w-3.5 rotate-225 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="-mx-4 overflow-hidden px-4 md:mx-0 md:px-0 flex" data-benefits-swiper>
+                        <div class="swiper-wrapper flex">
+                            <article class="swiper-slide">
+                                <img class="aspect-[1.43] w-full rounded-[14px] object-cover" src="/img/use.png" alt="" />
+                                <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#004200] md:text-[18px]">Без хлору</h3>
+                                <p class="mt-3 font-montserrat-bold text-xs leading-tight text-[#004200]">Комфортне використання без різкого запаху.</p>
+                            </article>
+
+                            <article class="swiper-slide">
+                                <img class="aspect-[1.43] w-full rounded-[14px] object-cover" src="/img/part-1.webp" alt="" />
+                                <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#004200] md:text-[18px]">Очищує та дезінфікує</h3>
+                                <p class="mt-3 font-montserrat-bold text-xs leading-tight text-[#004200]">Один засіб для щоденного догляду за домом.</p>
+                            </article>
+
+                            <article class="swiper-slide">
+                                <img class="aspect-[1.43] w-full rounded-[14px] object-cover" src="/img/product-example.png" alt="" />
+                                <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#004200] md:text-[18px]">Для різних поверхонь</h3>
+                                <p class="mt-3 font-montserrat-bold text-xs leading-tight text-[#004200]">Підходить для кухні, ванної кімнати та інших твердих поверхонь.</p>
+                            </article>
+
+                            <article class="swiper-slide">
+                                <img class="aspect-[1.43] w-full rounded-[14px] object-cover" src="/img/part-2.webp" alt="" />
+                                <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#004200] md:text-[18px]">Свіжий аромат апельсина</h3>
+                                <p class="mt-3 font-montserrat-bold text-xs leading-tight text-[#004200]">Дарує відчуття чистоти після кожного прибирання.</p>
+                            </article>
+                            <article class="swiper-slide">
+                                <img class="aspect-[1.43] w-full rounded-[14px] object-cover" src="/img/part-2.webp" alt="" />
+                                <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#004200] md:text-[18px]">Свіжий аромат апельсина</h3>
+                                <p class="mt-3 font-montserrat-bold text-xs leading-tight text-[#004200]">Дарує відчуття чистоти після кожного прибирання.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex h-9 w-22 overflow-hidden rounded-2xl bg-[#82B727]/20 md:hidden" aria-label="Гортання переваг">
+                        <button
+                            class="grid h-9 w-11 cursor-pointer place-items-center text-[#004200] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:opacity-40"
+                            type="button"
+                            aria-label="Попередня перевага"
+                            data-benefits-mobile-prev
+                        >
+                            <span class="h-3.5 w-3.5 rotate-45 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                        </button>
+                        <button
+                            class="grid h-9 w-11 cursor-pointer place-items-center text-[#004200] transition hover:bg-white/45 focus-visible:bg-white/45 [&.swiper-button-disabled]:cursor-default [&.swiper-button-disabled]:opacity-40"
+                            type="button"
+                            aria-label="Наступна перевага"
+                            data-benefits-mobile-next
+                        >
+                            <span class="h-3.5 w-3.5 rotate-225 border-b-2 border-l-2 border-current" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Formula Section-->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden w-full object-cover" src="/img/formula-bg.png" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/formula-bg-mob.png" alt="" />
+                <div class="absolute top-10 left-4 flex max-w-150 flex-col gap-4 text-white md:top-1/2 md:left-10 md:-translate-y-1/2">
+                    <h2 class="md:text-[64px] text-4xl font-montserrat-extra">Формула для щоденного використання</h2>
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12" src="/img/formula-icon-1.png" alt="Icon" />
+                            <p class="font-montserrat-reg">0% хлору</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12" src="/img/formula-icon-1.png" alt="Icon" />
+                            <p class="font-montserrat-reg">Ефективне очищення різних поверхонь</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12" src="/img/formula-icon-1.png" alt="Icon" />
+                            <p class="font-montserrat-reg">0% хлору</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12" src="/img/formula-icon-1.png" alt="Icon" />
+                            <p class="font-montserrat-reg">0% хлору</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12" src="/img/formula-icon-1.png" alt="Icon" />
+                            <p class="font-montserrat-reg">Ефективне очищення різних поверхонь</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Good for -->
+            <section class="px-4 py-10 md:px-10 md:py-20">
+                <div class="mx-auto max-w-360">
+                    <h2 class="mb-10 font-montserrat-bold text-[32px] leading-none font-bold text-[#3FA11F] md:mb-14 md:text-[40px]">Підходить для</h2>
+
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:grid-cols-8 md:gap-x-2 md:gap-y-0">
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                        <article class="flex flex-col items-center text-center">
+                            <div class="flex h-18 w-full items-center justify-center md:h-20">
+                                <img class="w-full object-contain" src="/img/duhovka.png" alt="" />
+                            </div>
+                            <h3 class="mt-5 max-w-26 font-montserrat-bold text-[16px] leading-[1.05] font-bold text-[#3FA11F]">Кухонних Поверхонь</h3>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- Big Turtle Section -->
+            <section class="relative overflow-hidden">
+                <img class="md:block hidden max-h-140 w-full object-cover" src="/img/big-turtle.png" alt="" />
+                <img class="md:hidden w-full object-cover" src="/img/turtle-mob.png" alt="" />
+                <div class="absolute top-1/2 left-4 flex max-w-110 -translate-y-1/2 flex-col gap-4 text-white md:left-10 md:pr-0 pr-4">
+                    <h2 class="font-montserrat-bold text-[44px] leading-none font-bold">
+                        Черепаха — <br />
+                        символ My Planet
+                    </h2>
+                    <p class="max-w-150 font-montserrat-reg text-sm leading-[120%]">
+                        Черепаха уособлює мудрість, стабільність, захист і природний ритм життя. <br />
+                        Вона нагадує, що справжня турбота проявляється у щоденних діях та рішеннях, які залишаються цінними з часом.
+                    </p>
+                </div>
+            </section>
+            <!-- Simple Uses -->
+            <section class="px-4 py-10 md:px-10 md:py-20">
+                <div class="mx-auto grid max-w-340 gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,860px)] md:items-center md:gap-10">
+                    <h2 class="font-montserrat-bold text-[32px] leading-none font-bold text-[#236591] md:text-[36px]">Просте використання</h2>
+
+                    <div class="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+                        <article>
+                            <img class="aspect-square w-full rounded-[14px] object-cover" src="/img/use.png" alt="" />
+                            <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#236591]">Розпиліть засіб на поверхню.</h3>
+                        </article>
+
+                        <article>
+                            <img class="aspect-square w-full rounded-[14px] object-cover" src="/img/product-example.png" alt="" />
+                            <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#236591]">Залиште на кілька хвилин за потреби.</h3>
+                        </article>
+
+                        <article>
+                            <img class="aspect-square w-full rounded-[14px] object-cover" src="/img/part-1.webp" alt="" />
+                            <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#236591]">Протріть чистою серветкою або губкою.</h3>
+                        </article>
+
+                        <article>
+                            <img class="aspect-square w-full rounded-[14px] object-cover" src="/img/part-2.webp" alt="" />
+                            <h3 class="mt-3 font-montserrat-bold text-[14px] leading-none font-bold text-[#236591]">Для поверхонь, що контактують з їжею, змийте водою.</h3>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- Community Section -->
+            <section class="bg-[#EEF4FA] px-4 py-6 md:px-10 md:py-8">
+                <div class="mx-auto grid max-w-340 gap-1 md:grid-cols-[minmax(0,972px)_384px] md:items-end">
+                    <div class="flex flex-col justify-between h-full">
+                        <h2 class="max-w-150 font-montserrat-bold text-[24px] leading-[1.15] font-bold text-[#236591] md:pb-0 pb-5">
+                            Станьте частиною спільноти My Planet<br />
+                            #lifewithmyplanet
+                        </h2>
+
+                        <div class="grid grid-cols-2 gap-1 md:grid-cols-4">
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-1.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-2.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-3.webp" alt="" />
+                            <img class="aspect-square w-full rounded-lg object-cover md:h-60 md:aspect-auto" src="/img/part-4.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <img class="md:block hidden aspect-square w-full rounded-lg object-cover md:h-96 md:w-96" src="/img/part-5.webp" alt="" />
+                </div>
+            </section>
+            <!-- FAQ (Blue )-->
+            <section class="px-4 py-10 md:px-10 md:py-14" data-faq>
+                <div class="mx-auto max-w-340">
+                    <h2 class="mb-8 text-center font-montserrat-bold text-[40px] leading-none font-bold text-dark-blue">Часті питання</h2>
+
+                    <div class="mx-auto max-w-155">
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="true"
+                                data-faq-button
+                            >
+                                <span>Чим засоби My Planet відрізняються від звичайних побутових засобів?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300 rotate-45" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    My Planet поєднує ефективність для щоденного прибирання з уважним ставленням до родини, поверхонь і довкілля.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Чи безпечні засоби My Planet для використання в домі з дітьми та домашніми тваринами?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Так, засоби підходять для щоденного дому за умови використання згідно з інструкцією на упаковці.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Для яких поверхонь підходять універсальні засоби My Planet?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Вони підходять для більшості твердих поверхонь: підлоги, кухонних поверхонь, ванної кімнати та інших зон дому.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Чи можна використовувати засоби My Planet щодня?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Так, формули розраховані на регулярне використання для підтримання чистоти без зайвого навантаження.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Чи залишають засоби My Planet різкий хімічний запах?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">Ні, продукти мають приємні аромати без відчуття агресивної хімії після прибирання.</p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#C0D7ED]/20" data-faq-item>
+                            <button
+                                class="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left font-montserrat-bold text-[14px] leading-none font-bold text-main-blue"
+                                type="button"
+                                aria-expanded="false"
+                                data-faq-button
+                            >
+                                <span>Як обрати правильний засіб My Planet для своїх потреб?</span>
+                                <span class="grid h-6 w-9 shrink-0 place-items-center rounded-full bg-[#C0D7ED]/20" aria-hidden="true">
+                                    <img class="h-3 w-3 transition duration-300" src="/img/Plus-blue.svg" alt="" data-faq-icon />
+                                </span>
+                            </button>
+                            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" data-faq-panel>
+                                <p class="pb-4 font-montserrat-reg text-[14px] leading-tight text-main-blue">
+                                    Орієнтуйтеся на зону використання: кухня, прання, дитячі речі, скло або універсальний догляд для дому.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <div data-include="/src/components/footer.html"></div>
+
+        <!-- Scripts -->
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                if (typeof Swiper === 'undefined' || !document.querySelector('[data-benefits-swiper]')) {
+                    return;
+                }
+
+                new Swiper('[data-benefits-swiper]', {
+                    slidesPerView: 1.18,
+                    spaceBetween: 8,
+                    speed: 350,
+                    watchOverflow: true,
+                    navigation: {
+                        prevEl: '[data-benefits-prev], [data-benefits-mobile-prev]',
+                        nextEl: '[data-benefits-next], [data-benefits-mobile-next]',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 8,
+                        },
+                    },
+                });
+            });
+        </script>
+        <script src="/js/script.js" defer></script>
+    </body>
+</html>
